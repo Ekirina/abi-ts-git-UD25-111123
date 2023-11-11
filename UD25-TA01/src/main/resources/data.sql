@@ -1,4 +1,3 @@
-
 CREATE table fabricantes(
 	codigo int,
     nombre VARCHAR(100),

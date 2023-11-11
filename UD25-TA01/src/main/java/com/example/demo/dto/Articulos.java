@@ -27,7 +27,6 @@ public class Articulos {
 	private Fabricantes fabricantes;
 	//constructores
 	public Articulos(){
-		
 	}
 	//@param id - @param nombre - @param precio - @param codigo_fabricante
 	public Articulos(Long id, String nombre, int precio, Fabricantes fabricantes) {

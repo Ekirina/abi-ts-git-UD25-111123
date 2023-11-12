@@ -53,7 +53,7 @@ public class ArticulosController {
 		return articulos_actualizado;
 	}
 	@DeleteMapping("/articulos/{id}")
-	public void eliminaraArticulos (@PathVariable(name="id")Long id) {
+	public void eliminarArticulos (@PathVariable(name="id")Long id) {
 		articulosServiceImpl.eliminarArticulos(id);
 	}
 }

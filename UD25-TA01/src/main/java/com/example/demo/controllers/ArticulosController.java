@@ -26,18 +26,18 @@ public class ArticulosController {
 	}
 	
 	@PostMapping("/articulos")
-	public Articulos salvarFabricantes(@RequestBody Articulos articulos) {
+	public Articulos salvarArticulos(@RequestBody Articulos articulos) {
 		return articulosServiceImpl.guardarArticulos(articulos);
 	}
 	@GetMapping("/articulos/{id}")
-	public Articulos fabricantesXID(@PathVariable(name="id")Long id) {
+	public Articulos articulosXID(@PathVariable(name="id")Long id) {
 		Articulos articulos_xid = new Articulos();
 		articulos_xid = articulosServiceImpl.articulosXID(id);
-		System.out.println("Fabricantes XID: "+articulos_xid);
+		System.out.println("Artículos XID: "+articulos_xid);
 		return articulos_xid;
 	}
 	@PutMapping("/articulos/{id}")
-	public Articulos actualizarFabricantes(@PathVariable(name="id")Long id, @RequestBody Articulos articulos) {
+	public Articulos actualizarArticulos(@PathVariable(name="id")Long id, @RequestBody Articulos articulos) {
 		Articulos articulos_seleccionado = new Articulos();
 		Articulos articulos_actualizado = new Articulos();
 		
@@ -48,12 +48,12 @@ public class ArticulosController {
 		articulos_seleccionado.setFabricantes(articulos.getFabricantes());
 		
 		articulos_actualizado = articulosServiceImpl.actualizarArticulos(articulos_seleccionado);
-		System.out.println("El fabricante actualizado es: "+articulos_actualizado);
+		System.out.println("El artículo actualizado es: "+articulos_actualizado);
 		
 		return articulos_actualizado;
 	}
 	@DeleteMapping("/articulos/{id}")
-	public void eliminarFabricantes (@PathVariable(name="id")Long id) {
+	public void eliminaraArticulos (@PathVariable(name="id")Long id) {
 		articulosServiceImpl.eliminarArticulos(id);
 	}
 }
